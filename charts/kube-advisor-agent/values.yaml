@@ -2,6 +2,8 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+config: {}
+
 replicaCount: 1
 
 image:
@@ -60,18 +62,18 @@ resources:
 #     path: /
 #     port: http
 
-# Additional volumes on the output Deployment definition.
-volumes: []
+# # Additional volumes on the output Deployment definition.
+# volumes: []
 # - name: foo
 #   secret:
 #     secretName: mysecret
 #     optional: false
 
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+# # Additional volumeMounts on the output Deployment definition.
+# volumeMounts: []
+# # - name: foo
+# #   mountPath: "/etc/foo"
+# #   readOnly: true
 
 nodeSelector: {}
 

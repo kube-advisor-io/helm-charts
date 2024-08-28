@@ -13,6 +13,7 @@ spec:
     metadata:
       annotations:
         checksum/config: {{ .Values.config | toYaml | sha256sum }}
+        checksum/certificates: {{ .Values.certificates | toYaml | sha256sum }}
       labels:
         {{- include "kube-advisor-agent.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
@@ -45,10 +46,16 @@ spec:
           volumeMounts:
             - name: config
               mountPath: /etc/config
+            - name: certificates
+              mountPath: /etc/certs
       volumes:
         - name: config
           configMap:
             name: {{ include "kube-advisor-agent.fullname" . }}
+        - name: certificates
+          secret:
+            secretName: {{ include "kube-advisor-agent.fullname" . }}-certificates
+
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

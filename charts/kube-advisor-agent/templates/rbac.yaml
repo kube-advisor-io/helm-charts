@@ -12,7 +12,7 @@ metadata:
   name: {{ include "kube-advisor-agent.fullname" . }}
 rules:
 - apiGroups: [""]
-  resources: ["namespaces", "pods"]
+  resources: ["namespaces", "pods", "nodes"]
   verbs: ["get", "list", "watch"]
 - apiGroups: ["apps"]
   resources: ["deployments"]

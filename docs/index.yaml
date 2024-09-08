@@ -2,23 +2,13 @@ apiVersion: v1
 entries:
   kube-advisor-agent:
   - apiVersion: v2
-    appVersion: 0.2.1
-    created: "2024-09-08T07:50:13.308101+02:00"
+    appVersion: 0.1.21
+    created: "2024-09-06T09:37:44.058018+02:00"
     description: A Helm chart for the kube-advisor-agent
-    digest: 68c5beab8a534e30cbd73084c352d6464f9e69fd890137dcfcbe581601ac3e03
-    name: kube-advisor-agent
-    type: application
-    urls:
-    - https://kube-advisor-io.github.io/helm-charts/kube-advisor-agent-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    appVersion: 0.2.1
-    created: "2024-09-08T07:50:13.307829+02:00"
-    description: A Helm chart for the kube-advisor-agent
-    digest: 2a47f7a85577ce52b6e156842d91c52c0bb93ca4790604a98c1ab28504ea1ae4
+    digest: d4e76c6b91ab1ed6a1aaa775c1c2f9e4b7ef98d55136e4fc90dc4d7315329ce3
     name: kube-advisor-agent
     type: application
     urls:
     - https://kube-advisor-io.github.io/helm-charts/kube-advisor-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-08T07:50:13.306307+02:00"
+generated: "2024-09-06T09:37:44.057494+02:00"

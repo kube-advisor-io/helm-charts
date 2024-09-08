@@ -9,7 +9,6 @@ replicaCount: 1
 image:
   repository: kubeadvisor/kube-advisor-agent
   pullPolicy: Always
-  tagSuffix: ""
   # Overrides the image tag whose default is the chart appVersion.
   # tag: "0.1.2"
 

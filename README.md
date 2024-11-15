@@ -1,2 +1,2 @@
 # kube-advisor-helm-charts
-Helm charts for kube-advisor.io
+Helm charts for https://kube-advisor.io

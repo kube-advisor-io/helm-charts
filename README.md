@@ -1,3 +1,4 @@
+![kube-advisor-logo](https://kube-advisor.io/kube-advisor-logo.png)
 # kube-advisor-helm-charts
 Helm charts for https://kube-advisor.io
 

@@ -1,8 +1,30 @@
-# Default values for kube-advisor-agent.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+# Default values for the helm chart kube-advisor-agent.
 
+# agent configuration
 config: {}
+  # clusterId: <your ClusterId>
+  # organizationId: <your OrganizationId>
+  # logLevel: info # one of trace, debug, info, warn, error
+  # mqtt:
+  #   broker: <MQTT broker url>
+  #   topic: <MQTT topic>
+  #   qos: <MQTT QoS parameter>
+  #   caCertificate: "" # set this to empty if you want to change to user/password auth
+  #   tlsKeyFile: "" # set this to empty if you want to change to user/password auth
+  #   tlsCertificateFile: "" # set this to empty if you want to change to user/password auth
+  #   username: <MQTT username>
+  #   password: <MQTT password>
+  #   clientId: <your clusterId>
+  #   cleanSession: false # MQTT clean session parameter 
+
+# Adjust resource usage if you see OOMKills or throttling
+resources: 
+  limits:
+    cpu: 50m
+    memory: 30Mi
+  requests:
+    cpu: 10m
+    memory: 30Mi
 
 replicaCount: 1
 
@@ -50,14 +72,6 @@ securityContext:
 service:
   type: ClusterIP
   port: 80
-
-resources: 
-  limits:
-    cpu: 50m
-    memory: 30Mi
-  requests:
-    cpu: 10m
-    memory: 30Mi
 
 # livenessProbe:
 #   httpGet:

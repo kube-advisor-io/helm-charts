@@ -27,3 +27,5 @@ config:
   #   clientId: <your clusterId>
   #   cleanSession: false # MQTT clean session parameter 
 ```
+
+The permissions of the agent can be viewed [here](https://github.com/kube-advisor-io/helm-charts/blob/main/charts/kube-advisor-agent/templates/rbac.yaml)
